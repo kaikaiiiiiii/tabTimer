@@ -27,6 +27,7 @@
       addTimer();
     }
   });
+  addTimer();
   function refreshTime() {
     var match = document.title.match(/^\d{1,2}(\:|\uff1a)\d{1,2}/);
     // in some case, google translate will change ENG comma ':' to CHN comma '：'
@@ -56,5 +57,5 @@
       document.title = newtitle;
     }
   }
-  setInterval(refreshTime, 1000);
+  setInterval(refreshTime, 200);
 })();
