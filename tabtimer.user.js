@@ -9,6 +9,10 @@
 // @grant        none
 // @update-url   https://github.com/kaikaiiiiiii/tabTimer/raw/master/tabtimer.user.js
 // ==/UserScript==
+
+////////////////////////////////////////////////////////////////////
+// filename must be *.user.js to prompt to install by Tampermonkey
+////////////////////////////////////////////////////////////////////
 (function() {
     'use strict';
     var originalTitle = document.title;
@@ -20,6 +24,7 @@
      });
     function refreshTime() {
         var match = document.title.match(/^\d{1,2}\:\d{1,2}/);
+        if (match == null) { match = document.title.match(/^\d{1,2}\uff1a\d{1,2}/); } // in some case, google translate will change ENG comma ':' to CHN comma '：'
         if(match==null){
             originalTitle = document.title;
         }
