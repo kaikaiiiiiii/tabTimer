@@ -7,6 +7,7 @@
 // @include      *
 // @match        *://*;
 // @grant        none
+// @update-url   https://github.com/kaikaiiiiiii/tabTimer/raw/master/tabtimer.js
 // ==/UserScript==
 (function() {
     'use strict';
@@ -28,9 +29,9 @@
     function addTimer(){
             var rawcount = new Date() - initialTime;
             var seconds = Math.floor(rawcount / 1000);
-            var hh = Math.floor(seconds / 3600);
-            var mm = Math.floor(seconds / 60) % 60;
-            var ss = seconds % 60;
+            var hh = Math.floor(seconds / 3600).trim();
+            var mm = Math.floor(seconds / 60)%60 .trim();
+            var ss = seconds%60;
             var stamp;
             if (hh > 0) {
                 stamp = hh + ':' + mm + '|';
