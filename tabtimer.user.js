@@ -57,5 +57,5 @@
       document.title = newtitle;
     }
   }
-  setInterval(refreshTime, 200);
+  setInterval(refreshTime, 500);
 })();
