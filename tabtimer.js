@@ -1,24 +1,18 @@
 // ==UserScript==
 // @name         Tab Timer
-// @namespace    http://tampermonkey.net/
+// @namespace    http://kaikai.info/
 // @version      0.1
 // @description  为 Tab 页添加计时，用于一些要求挂机时间的页面，或提醒自己在页面上浪费的时间。
 // @author       kaikai
-// @match        *://*/*
-// @grant        GM_registerMenuCommand
+// @include      *
+// @match        *://*;
+// @grant        none
 // ==/UserScript==
-
-/* var test = GM_registerMenuCommand('test',oo, 't');
-
-function oo(e){
-    console.log(e,test)
-}
- */
 (function() {
     'use strict';
     var originalTitle = document.title;
     var newtitle = originalTitle;
-    var initialTime = new Date()
+    var initialTime = new Date();
      document.addEventListener("visibilitychange", function(){
          if(document.visibilityState=='hidden'){document.title = originalTitle;}
          if(document.visibilityState=='visible'){addTimer();}
