@@ -7,7 +7,7 @@
 // @include      *
 // @match        *://*;
 // @grant        none
-// @update-url   https://github.com/kaikaiiiiiii/tabTimer/raw/master/tabtimer.js
+// @update-url   https://github.com/kaikaiiiiiii/tabTimer/raw/master/tabtimer.user.js
 // ==/UserScript==
 (function() {
     'use strict';
